@@ -8,13 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class CategortMenuFragment extends Fragment implements View.OnClickListener {
-    private Button menu1Button, menu2Button, menu3Button, menu4Button, menu5Button;
+    private ImageView menu1Button, menu2Button, menu3Button, menu4Button, menu5Button;
 
 
     public CategortMenuFragment() {
@@ -28,16 +29,16 @@ public class CategortMenuFragment extends Fragment implements View.OnClickListen
 
 //Ininial
         menu1Button = getView().findViewById(R.id.imvMenu1);
-//        menu2Button = getView().findViewById(R.id.imvMenu2);
-//        menu3Button = getView().findViewById(R.id.imvMenu3);
-//        menu4Button = getView().findViewById(R.id.imvMenu4);
-//        menu5Button = getView().findViewById(R.id.imvMenu5);
-//
-//        menu1Button.setOnClickListener(this);
-//        menu2Button.setOnClickListener(this);
-//        menu3Button.setOnClickListener(this);
-//        menu4Button.setOnClickListener(this);
-//        menu5Button.setOnClickListener(this);
+        menu2Button = getView().findViewById(R.id.imvMenu2);
+        menu3Button = getView().findViewById(R.id.imvMenu3);
+        menu4Button = getView().findViewById(R.id.imvMenu4);
+        menu5Button = getView().findViewById(R.id.imvMenu5);
+
+        menu1Button.setOnClickListener(this);
+        menu2Button.setOnClickListener(this);
+        menu3Button.setOnClickListener(this);
+        menu4Button.setOnClickListener(this);
+        menu5Button.setOnClickListener(this);
 
 
         // Main Main Mthod
