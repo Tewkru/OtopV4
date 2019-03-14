@@ -2,7 +2,9 @@ package tewotop.kru.ac.th;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +14,9 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  */
 public class ListViewFragment extends Fragment {
+    private String[] titleStrings = new String[]{"อาหาร","เครื่องดื่ม","ผ้าเครื่องแต่งกาย","ของใช้ ของตกแต่ง ของที่ระลึก","สมุนไพรที่ไม่ใช่อาหาร"};
 
-
+private  int index;
     public ListViewFragment() {
         // Required empty public constructor
     }
@@ -25,6 +28,28 @@ public class ListViewFragment extends Fragment {
         listViewFragment.setArguments(bundle);
         return listViewFragment;
     }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+//        Create Toolbar
+        Toolbar toolbar = getView().findViewById(R.id.toobarListview);
+        ((MainActivity)getActivity()).setSupportActionBar(toolbar);
+        index = getArguments().getInt("Cat", 0);
+
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle(titleStrings[index]);
+        ((MainActivity) getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
+        ((MainActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().popBackStack();
+            }
+        });
+
+//        Creat RecyclererView
+
+    }// MainMethod
 
 
     @Override
