@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg6new"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CategortMenuFragment">
+
+    <!--ฺฺBanner-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/banner2" />
+
+    <!--Content-->
+   <ScrollView
+       android:layout_width="match_parent"
+       android:paddingBottom="30dp"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="50dp"
+           android:orientation="vertical"
+           android:padding="30dp">
+
+           <ImageView
+               android:id="@+id/imvMenu1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:src="@drawable/menu1new" />
+
+           <ImageView
+               android:id="@+id/imvMenu2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:src="@drawable/menu2new" />
+
+           <ImageView
+               android:id="@+id/imvMenu3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:src="@drawable/menu3new" />
+
+           <ImageView
+               android:id="@+id/imvMenu4"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:src="@drawable/menu4new" />
+
+           <ImageView
+               android:id="@+id/imvMenu5"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal"
+               android:src="@drawable/menu55new" />
+
+
+       </LinearLayout>
+
+   </ScrollView>
+
+</LinearLayout>
